@@ -1,0 +1,53 @@
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+#
+# Complete the 'sameSubstring' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. STRING s
+#  2. STRING t
+#  3. INTEGER K
+#
+
+def sameSubstring(s, t, K):
+    n = len(s)
+    left = 0
+    max_len = 0
+    current_cost = 0
+
+    for right in range(n):
+        # Add cost of including s[right] → t[right]
+        current_cost += abs(ord(s[right]) - ord(t[right]))
+
+        # Shrink window until cost is within K
+        while current_cost > K:
+            current_cost -= abs(ord(s[left]) - ord(t[left]))
+            left += 1
+
+        # Update maximum window size
+        max_len = max(max_len, right - left + 1)
+
+    return max_len
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    t = input()
+
+    K = int(input().strip())
+
+    result = sameSubstring(s, t, K)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()

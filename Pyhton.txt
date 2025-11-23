@@ -1,0 +1,258 @@
+
+
+
+========
+Python:
+========
+Guido Van Rossum is the creator of the Python programming language.
+He developed Python in the late 1980s and released the first version in February 20, 1991
+
+=============
+=> IDLE python:
+IDLE = Integrated Development and Learning Environment
+IDLE is a built-in tool that lets you write, run, and test Python code easily.
+
+======================
+=> Features in Python:
+1. Functional Programming from C
+2. OOP from C++
+3. Scripting language features form Perl and shell script
+4. Modular programming features from Modula-3
+
+==========
+=> Features:
+==========
+-> 30 keywords in python
+-> Freeware & opensource
+-> high level programming language
+-> Platform independent (write once and run anywhere)
+-> Portability (migrate python program from windows to mac)
+-> Dynamically typed language - because you don’t need to declare variable types explicitly.
+-> Both procedure and object oriented
+-> Interpreted - is the program that executes your Python code. ( line by line) -  (no need to compile)
+So, Python is an interpreted language, not a compiled one (though it does compile to bytecode internally).
+-> Extensible: Python is extensible because it allows integration with other languages like C, C++, and Java,
+extending Python’s capabilities beyond its built-in features.
+Example: Imagine you have a slow Python loop for a heavy calculation —
+you could write that calculation in C, compile it, and then call it in Python:
+-> Embedded:
+Python is embedded when you use the Python interpreter inside another application.
+allowing that application to run Python code internally.
+This lets developers use Python as a scripting language inside other software.
+-> Extensive library:
+Python has a large collection of built-in modules and packages — called the Standard Library,
+that provide tools for almost every common programming task.
+Because of this extensive (or rich) library, you don’t need to write everything from scratch.
+
+
+====================
+=> Limitations of Python:
+====================
+1. Performance wise
+2. Mobile applications
+
+Myth: It is not sutable for large scale enterprise applications
+
+======================
+=> Syntax from C and ABC language
+
+======================
+=> where we can use python:
+======================
+1. Desktop applications
+2. web applications
+3. Database applications
+4. Networking applications
+5. Games
+6. Data analysis
+7. Machine learning
+8. AI
+9. IOT applications
+
+==================
+=> Flavours of Python:
+==================
+1. CPython - The default and most widely used Python implementation written in C.
+2. Jython or JPython - for java
+3. IronPython - C#  - Python implemented in .NET framework.
+4. Pypy - inside python performance wise - A fast, JIT-compiled version of Python.
+5. RubyPython -
+6. Anaconda Python - Python distribution focused on data science and scientific computing.
+7. Stackless Python - A version of Python that supports microthreads (tasklets) for massive concurrency.
+
+================
+=> Python versions:
+================
+Python 1.0 -  Jan 1994
+Python 2.0 - Oct 2000
+Python 3.0 - Dec 2008
+
+Latest version - 3.12
+
+-> Any version should provide support for old version programs.
+But Python -3 will never provide support to python -2
+
+-> backward compatibility: Python 3 is not backward compatible with Python 2
+
+==============
+=> Identifiers:
+==============
+An identifier is a name given to entities like variables, functions, classes, or objects in Python.
+They are used to identify and access data in the program.
+
+-> Must start with a letter (a–z, A–Z) or underscore (_)
+-> Can contain letters, digits, or underscores after the first character
+-> Case sensitive
+-> Cannot be a Python keyword
+-> No special characters or spaces allowed
+
+=> Note:
+-> If any identifier starts with 
+_(underscore): private
+__(double underscore): strongly private
+__main__ : language specify identifier
+
+==============
+=> In Python, there are several ways to declare variables, 
+depending on the type, scope, and purpose. 
+==============
+
+-> Python Variable Declaration Methods:
+1. Simple Assignment
+   x = 10
+   name = "Alice"
+   pi = 3.14
+
+2. Multiple Assignment
+   a, b, c = 1, 2, 3      # different values
+   x = y = z = 0           # same value
+
+3. Using Data Structures
+   my_list = [1, 2, 3]
+   my_tuple = (10, 20)
+   my_dict = {"name": "Alice", "age": 25}
+   my_set = {1, 2, 3}
+
+4. Dynamic Typing
+   x = 10       # integer
+   x = "Hello"  # string
+   x = 3.14     # float
+
+5. Using input()
+   name = input("Enter name: ")
+   age = int(input("Enter age: "))
+
+6. Using globals() / locals()
+   globals()['var_name'] = 100
+   locals()['temp'] = "Hello"
+
+7. Constants (by convention)
+   PI = 3.14159
+   MAX_USERS = 100
+
+
+Use simple assignment for most variables.
+Use constants for values that shouldn’t change.
+Use multiple assignment for concise code.
+   
+==============
+=> Reserved words:
+==============
+
+-> Only 35 reserved words:
+False      await      		else       	import     	pass
+None       break      	except     in         		raise
+True       	class      		finally    	is         		return
+and        	continue   	for        	lambda     	try
+as         	def        		from       	nonlocal 	while
+assert     del        		global    	 not        		with
+async     	elif       		if         		or         		yield
+
+Notes:
+=====
+-> These keywords cannot be used as variable names.
+-> Some are for control flow (if, for, while, try, etc.).
+-> Others are logical operators (and, or, not).
+-> async and await are used for asynchronous programming.
+
+Note:
+====
+1. only alphabet symbols
+2. except first three(True, False, None), all are small 
+
+============
+=> Data Types:
+============
+
+int 		 		10	 		Integer numbers
+float  			3.14		Floating-point numbers
+complex		2 + 3j 		 Complex numbers
+
+list			[1, 2, 3]			Ordered, mutable sequence
+tuple		(1, 2, 3)			Ordered, immutable sequence
+range		range(5)			Sequence of numbers, often in loops
+
+str 				"Hello" 		Sequence of Unicode characters
+
+set				{1, 2, 3}				Mutable, unordered set
+frozenset	frozenset({1,2})	Immutable set
+
+dict 		{"name": "Alice", "age": 25}  Mutable key-value pairs
+
+bool 		True / False  	Logical values
+
+NoneType 		None 		Null / no value
+
+
+Note:
+====
+-> In python everything is object
+
+==========
+
+=> int:
+4 main ways:
+
+1. Decimal (Base 10)
+2. Binary (Base 2) – uses digits 0 and 1, prefix 0b or 0B
+3. Octal (Base 8) – uses digits 0–7, prefix 0o or 0O
+4. Hexadecimal (Base 16) – uses digits 0–9 and letters A–F (or a–f), prefix 0x or 0X
+
+Base				Prefix			Example			Decimal Value
+--------				--------			--------				--------
+Decimal			None			123					123
+Binary				0b				0b1010			10
+Octal				0o				0o17				15
+Hexadecimal	0x				0x1A				26
+
+ex:
+x=10
+y=0b10
+z=0o10
+a=0X10
+
+========
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

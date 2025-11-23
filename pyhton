@@ -1,0 +1,4 @@
+print("hello world")
+a,b=10,20
+print(a+b)
+
